@@ -60,7 +60,7 @@ This will configure firmware to look 1wire sensors in GPIO pin 2. Found sensor i
 
 ## example application
 Wireless doorbell:
-Requires 2 esp01 modules, one connected button and other connected to buzzed, both on GPIO 3.
+Requires 2 esp01 modules, one connected button and other connected to buzzer, both on GPIO 3.
 
 configuration file for esp connected to button, assuming bell will ring when GPIO is low:
 ```
