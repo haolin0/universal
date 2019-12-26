@@ -13,7 +13,7 @@ Everything and the kitchen sink firmware for ESP8266 and MQTT
 ## installation
 Adjust STASSID and STAPSK to match your network and mqtt_server, user and pass to match your MQTT server configuration.
 
-When programming, select at least 64k SPIFFS for configuration file. 1M flash chip required for OTA to work.
+When programming, select at least 64k SPIFFS for configuration file.
 
 ## theory of operation
 When firmware starts, it will read configuration file for things to monitor. When running, it will send values using MQTT every 60 seconds.
@@ -54,7 +54,7 @@ Service channel topic is ESP/service/ESP_xxxxxx where xxxxxx is 3 last bytes of 
 To add line to configuration file, use command config with line contents appended after config keyword. For example:
 
 ```
-# mosquitto_pub -t "ESP/service/ESP_0a63e9" -m "1wire 2"
+# mosquitto_pub -t "ESP/service/ESP_0a63e9" -m "config 1wire 2"
 ```
 
 This will configure firmware to look 1wire sensors in GPIO pin 2. Found sensor id's will be sent to debug channel on startup and each sensor will be read every 60 seconds. If temperature has not changed from previous mesaurement, MQTT message will not be sent. Each sensor has it's own MQTT topic with name based on sensor ID.
@@ -63,7 +63,7 @@ This will configure firmware to look 1wire sensors in GPIO pin 2. Found sensor i
 Wireless doorbell:
 Requires 2 esp01 modules, one connected button and other connected to buzzer, both on GPIO 3.
 
-configuration file for esp connected to button, assuming bell will ring when GPIO is low:
+configuration file for esp connected to button, assuming buzzer will sound when GPIO is low:
 ```
 iomon 3 ESP/service/ESP_xxxxxx "setio 3 0" "setio 3 1"
 ```
