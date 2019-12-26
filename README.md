@@ -2,6 +2,7 @@
 Everything and the kitchen sink firmware for ESP8266 and MQTT
 
 ## dependencies
+* [ESP8266](https://github.com/esp8266/Arduino) - ESP8266 core for Arduino
 * [PubSubClient](https://github.com/knolleary/pubsubclient) - MQTT client
 * [OneWire](https://www.pjrc.com/teensy/td_libs_OneWire.html) - 1wire support
 * [DallasTemperature](https://github.com/milesburton/Arduino-Temperature-Control-Library) - for reading DS1820
