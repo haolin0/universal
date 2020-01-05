@@ -1,0 +1,14 @@
+
+TODO/ideas
+
+- i2c io-expander read/write
+- bitbang out with clock
+- profibus
+- clock from ntp
+- io on/off long period timer with clock and offset
+- io out short period timer with multiple on/off times
+- pulse input
+- pulse output
+- dynamic memory allocation
+- 
+- 
